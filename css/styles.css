@@ -25,6 +25,8 @@ body {
     padding-right: 10px;
 }
 
+/* HEADER */
+
 .page-header {
     background-color: black;
     color: white;
@@ -35,66 +37,149 @@ body {
     background-size: cover;
 }
 
-.page-header__nav {
-    margin-bottom: 90px;
+.navbar {
+    padding: 0;
+    align-items: flex-start;
+    margin-bottom: 115px;
 }
 
-.main-nav {
-    max-width: 860px;
+.navbar-toggler-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("../images/burgermenu.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.main-nav__list {
-    min-width: 400px;
-    padding: 10px;
-    display: flex;
-    list-style: none;
-    line-height: 1.3em;
-    justify-content: space-between;
+.navbar-nav {
+    text-align: justify;
 }
 
-.main-nav__list--item {
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 5px;
     min-width: 80px;
-}
-
-.main-nav__list--item a {
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
+    text-align: center;
     font-weight: bold;
     letter-spacing: 0.05em;
+}
+
+.nav-link:hover {
+    color: #000000;
+    background: white;
 }
 
 .page-header__title {
     font-family: 'Lora', serif;
     font-weight: bold;
     font-size: 72px;
-    max-width: 620px;
+    max-width: 580px;
     letter-spacing: 0.05em;
     text-shadow: 0 11px 5px rgba(0, 0, 0, 0.33);
 }
 
+/* MUSICAL PLAYER */
+
 .musical-player {
     background-color: #b50b1e;
     min-height: 80px;
+    margin-bottom: 50px;
 }
+
+.musical-player__button-play,
+.musical-player__button-pause {
+    width: 60px;
+    height: 60px;
+    border: none;
+}
+
+.musical-player__control {
+    width: 40px;
+    height: 40px;
+    margin: auto;
+}
+
+.musical-player__button-hidden {
+    display: none;
+}
+
+/* GENRES STATIONS */
 
 .genres-stations__title {
-
+    font-size: 36px;
+    font-weight: bold;
+    color: #2a333c;
+    margin-bottom: 50px;
 }
 
-.genres-stations-list {
-    justify-content: center;
+.genres-stations__list {
+    margin-bottom: 10px;
 }
 
 .genres-stations-list__item {
+    display: flex;
     max-width: 220px;
     height: 180px;
     border: 1px solid #e1e1e1;
-    margin-left: 20px;
-    margin-top: 25px;
+    margin: auto;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+}
+
+.genres-stations-list__item:hover {
+    text-decoration: none;
 }
 
 .genres-stations__button--load-more {
     width: 300px;
+    height: 40px;
     justify-content: center;
+    color: #c12127;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin-bottom: 50px;
+    background: none;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+/* FOOTER */
+
+.page-footer {
+    min-height: 100px;
+    background-color: #ffffff;
+}
+
+.copyright {
+    align-items: center;
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+    .page-header {
+        min-height: 200px;
+    }
+
+    .page-header__title {
+        font-size: 36px;
+        max-width: 400px;
+    }
+
 }
