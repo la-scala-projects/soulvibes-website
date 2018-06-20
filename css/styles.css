@@ -15,6 +15,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding-bottom: 70px;
+}
+
+.navbar {
+    margin-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.5)
 }
 
 .navbar-toggler-icon {
@@ -35,14 +41,18 @@ body {
     margin: 0;
 }
 
+.nav-item {
+    padding: 0 10px;
+}
+
 .nav-link {
+    width: 100%;
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
     letter-spacing: 0.05em;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .nav-link:hover {
@@ -184,17 +194,20 @@ body {
 
 @media screen and (min-width: 768px) {
 
-    .nav-link {
+    .navbar {
+        margin-bottom: 100px;
         background-color: transparent;
     }
 
     .page-header__title {
-        font-size: 72px;
+        font-size: 48px;
     }
 }
 
 @media screen and (min-width: 992px) {
-
+    .page-header__title {
+        font-size: 72px;
+        width: 75%;
 }
 
 @media screen and (min-width: 1200px) {
