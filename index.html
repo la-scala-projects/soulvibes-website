@@ -70,28 +70,52 @@
                 <div class="genres-stations__list">
                     <div class="row">
                         <div class="col-12 col-sm-6 col-md-3">
-                            <a class="genres-stations-list__item genres-stations-list__item--trending" href="#">Trending Top</a>
+                            <a class="genres-stations-list__item" href="#">
+                                <i class="genres-stations-icon genres-stations-list__item--trending"></i>
+                                Trending Top
+                            </a>
                         </div>
                         <div class="col-12 col-sm-6 col-md-3">
-                            <a class="genres-stations-list__item genres-stations-list__item--rock" href="#">Rock</a>
+                            <a class="genres-stations-list__item" href="#">
+                                <i class="genres-stations-icon genres-stations-list__item--rock"></i>
+                                Rock
+                            </a>
                         </div>
                         <div class="col-12 col-sm-6 col-md-3">
-                            <a class="genres-stations-list__item genres-stations-list__item--r-n-b" href="#">R n B</a>
+                            <a class="genres-stations-list__item" href="#">
+                                <i class="genres-stations-icon genres-stations-list__item--r-n-b"></i>
+                                R n B
+                            </a>
                         </div>
                         <div class="col-12 col-sm-6 col-md-3">
-                            <a class="genres-stations-list__item genres-stations-list__item--alternative" href="#">Alternative</a>
+                            <a class="genres-stations-list__item" href="#">
+                                <i class="genres-stations-icon genres-stations-list__item--alternative"></i>
+                                Alternative
+                            </a>
                         </div>
                         <div class="col-12 col-sm-6 col-md-3">
-                            <a class="genres-stations-list__item genres-stations-list__item--country" href="#">Country</a>
+                            <a class="genres-stations-list__item" href="#">
+                                <i class="genres-stations-icon genres-stations-list__item--country"></i>
+                                Country
+                            </a>
                         </div>
                         <div class="col-12 col-sm-6 col-md-3">
-                            <a class="genres-stations-list__item genres-stations-list__item--pop" href="#">Pop</a>
+                            <a class="genres-stations-list__item" href="#">
+                                <i class="genres-stations-icon genres-stations-list__item--pop"></i>
+                                Pop
+                            </a>
                         </div>
                         <div class="col-12 col-sm-6 col-md-3">
-                            <a class="genres-stations-list__item genres-stations-list__item--jazz" href="#">Jazz</a>
+                            <a class="genres-stations-list__item" href="#">
+                                <i class="genres-stations-icon genres-stations-list__item--jazz"></i>
+                                Jazz
+                            </a>
                         </div>
                         <div class="col-12 col-sm-6 col-md-3">
-                            <a class="genres-stations-list__item genres-stations-list__item--reggae" href="#">Reggae</a>
+                            <a class="genres-stations-list__item" href="#">
+                                <i class="genres-stations-icon genres-stations-list__item--reggae"></i>
+                                Reggae
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -106,17 +130,19 @@
             </div>
             <div class="event-list">
                 <div class="container">
-                    <div class="first-event">
-                        <p class="event-date">Wednesday  / 22 Dec 2017 /  12:00 PM</p>
-                        <button class="band-name">Linkin Park</button>
-                        <p class="event-address">Ziggo Dome<br>
-                            De Passage 100, Amsterdam, Netherlands</p>
-                    </div>
-                    <div class="second-event">
-                        <p class="event-date">Wednesday  / 22 Dec 2017 /  12:00 PM</p>
-                        <button class="band-name">Burger kill</button>
-                        <p class="event-address">Ziggo Dome<br>
-                            De Passage 100, Amsterdam, Netherlands</p>
+                    <div class="event-content__container-common">
+                        <div class="event-content__container event-content__container--first">
+                            <p class="event-date">Wednesday  / 22 Dec 2017 /  12:00 PM</p>
+                            <button class="band-name">Linkin Park</button>
+                            <p class="event-address">Ziggo Dome<br>
+                                De Passage 100, Amsterdam, Netherlands</p>
+                        </div>
+                        <div class="event-content__container event-content__container--second">
+                            <p class="event-date">Wednesday  / 22 Dec 2017 /  12:00 PM</p>
+                            <button class="band-name">Burger kill</button>
+                            <p class="event-address">Ziggo Dome<br>
+                                De Passage 100, Amsterdam, Netherlands</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -165,9 +191,9 @@
             <div class="subscribe-block">
                 <div class="container">
                     <b class="subscribe-block__title">Join Our Community</b>
-                    <p>Be among the first to hear about our new tracks, events, news
+                    <p class="subscribe-block__content">Be among the first to hear about our new tracks, events, news
                         and so much more!</p>
-                    <form action="#" method="post">
+                    <form action="#" method="post" class="subscribe-form">
                         <input class="email-form" type="email" name="your-email" id="user-email" placeholder="Your email address">
                         <input class="subscribe-button" type="submit" name="subscribe" id="btn-subscribe" value="Subscribes">
                     </form>
@@ -177,17 +203,26 @@
     </main>
     <footer class="page-footer">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-md-6 copyright ">
-                    <p>Copyright &copy 2017 soulvibes. All rights reserved</p></div>
-                <div class="col-12 col-md-6">
-                    <ul class="social_links">
-                        <li class="social_links-item"><a class="link--facebook" href="#">Facebook</a></li>
-                        <li class="social_links-item"><a class="link--twitter" href="#">Twitter</a></li>
-                        <li class="social_links-item"><a class="link--instagram" href="#">Instagram</a></li>
-                        <li class="social_links-item"><a class="link--pinterest" href="#">Pinterest</a></li>
-                        <li class="social_links-item"><a class="link--youtube" href="#">Youtube</a></li>
-                    </ul>
+            <div class="row flex-wrap-reverse page-footer__content-block">
+                <div class="col-8 col-md-6 page-info">
+                    <p class="copyright text-center text-md-left">Copyright &copy 2017 soulvibes. All rights reserved</p>
+                </div>
+                <div class="col-12 col-md-6 social-links">
+                    <a class="social-links__item-container" href="#">
+                        <div class="social-links__icon link--facebook">Facebook</div>
+                    </a>
+                    <a class="social-links__item-container" href="#">
+                        <div class="social-links__icon link--twitter">Twitter</div>
+                    </a>
+                    <a class="social-links__item-container" href="#">
+                        <div class="social-links__icon link--instagram">Instagram</div>
+                    </a>
+                    <a class="social-links__item-container" href="#">
+                        <div class="social-links__icon link--pinterest">Pinterest</div>
+                    </a>
+                    <a class="social-links__item-container" href="#">
+                        <div class="social-links__icon link--youtube">Youtube</div>
+                    </a>
                 </div>
             </div>
         </div>

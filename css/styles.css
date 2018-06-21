@@ -75,6 +75,7 @@ body {
 
 .musical-player {
     background-color: #b50b1e;
+    margin-bottom: 50px;
 }
 
 .musical-player__button-play,
@@ -96,6 +97,10 @@ body {
 
 /* GENRES STATIONS */
 
+.genres-stations {
+    margin-bottom: 30px;
+}
+
 .genres-stations__title,
 .upcoming-events__title,
 .latest-news__title,
@@ -112,17 +117,78 @@ body {
 
 .genres-stations-list__item {
     display: flex;
+    flex-direction: column;
     height: 180px;
     border: 1px solid #e1e1e1;
     margin: auto;
     margin-bottom: 25px;
     border-radius: 3px;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    color: #2a333c;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
 }
 
 .genres-stations-list__item:hover {
     text-decoration: none;
+    color: #2a333c;
+    background-color: #f0f0f0;
+}
+
+.genres-stations-icon {
+    background-image: url("../images/sprite-musical-genres.png");
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+
+.genres-stations-list__item--trending {
+    width: 67px;
+    height: 71px;
+    background-position: -314px -124px;
+}
+
+.genres-stations-list__item--rock {
+    width: 83px;
+    height: 82px;
+    background-position: -211px -124px;
+}
+
+.genres-stations-list__item--r-n-b {
+    width: 99px;
+    height: 94px;
+    background-position: -272px -10px;
+}
+
+.genres-stations-list__item--alternative {
+    width: 64px;
+    height: 67px;
+    background-position: -10px -10px;
+}
+
+.genres-stations-list__item--country {
+    width: 70px;
+    height: 70px;
+    background-position: -94px -10px;
+}
+
+.genres-stations-list__item--pop {
+    width: 85px;
+    height: 85px;
+    background-position: -10px -100px;
+}
+
+.genres-stations-list__item--jazz {
+    width: 68px;
+    height: 76px;
+    background-position: -184px -10px;
+}
+
+.genres-stations-list__item--reggae {
+    width: 76px;
+    height: 79px;
+    background-position: -115px -106px;
 }
 
 .genres-stations__button--load-more {
@@ -151,16 +217,80 @@ body {
 .event-list {
     background-color: #b30b1e;
     color: #ffffff;
+    margin-bottom: 50px;
+}
+
+.event-content__container-common {
+    display: block;
+    width: 50%;
+    margin-top: 33px;
+    margin-bottom: 33px;
+    margin-left: 10px;
+
+    outline: 2px solid white;
 }
 
 /* LATEST NEWS */
+
+.latest-news {
+    margin-bottom: 30px;
+}
 
 .latest-news__content {
     display: flex;
     flex-direction: column;
     border: 1px solid #e1e1e1;
     border-radius: 3px;
-    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.news-date {
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 15px;
+}
+
+.news-date::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #dddddd;
+    position: absolute;
+    left: -15px;
+    top: 8px;
+}
+
+.news-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.news-text {
+    margin-bottom: 30px;
+}
+
+.latest-news__button--read-more {
+    display: flex;
+    width: 100px;
+    height: 30px;
+    text-transform: uppercase;
+    color: #b50b1e;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid #e1e1e1;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.latest-news__button--read-more:hover {
+    background-color: #b50b1e;
+    color: white;
     text-decoration: none;
 }
 
@@ -169,31 +299,136 @@ body {
 .subscribe-block {
     background-color: #30333c;
     color: #ffffff;
+    padding: 40px 0;
+}
+
+.subscribe-block__title {
+    display: inline-block;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 40px;
+    line-height: 1em;
+}
+
+.subscribe-block__content {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-form {
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 3px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.subscribe-button {
+    width: 130px;
+    height: 50px;
+    border-radius: 3px;
+    background-color: #b50b1e;
+    border: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.subscribe-button:hover {
+    background-color: #700814;
 }
 
 /* FOOTER */
 
 .page-footer {
     background-color: #ffffff;
+    padding: 40px 0;
+}
+
+.page-footer__content-block {
+    align-items: center;
+    justify-content: center;
 }
 
 .copyright {
+    display: inline-block;
+    font-size: 10px;
+    margin: 0;
+}
+
+.social-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.social-links__item-container {
+    display: flex;
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
     align-items: center;
 }
 
-.social_links {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.social-links__item-container:hover {
+    background-color: #f0f0f0;
 }
 
-@media screen and (min-width: 576px) {
-
+.social-links__icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/sprite-social.png");
+    background-repeat: no-repeat;
 }
+
+.link--facebook {
+    width: 15px;
+    height: 28px;
+    background-position: -10px -10px;
+}
+
+.link--twitter {
+    width: 24px;
+    height: 19px;
+    background-position: -10px -148px;
+}
+
+.link--instagram {
+    width: 23px;
+    height: 23px;
+    background-position: -10px -58px;
+}
+
+.link--pinterest {
+    width: 22px;
+    height: 27px;
+    background-position: -10px -101px;
+}
+
+.link--youtube {
+    width: 22px;
+    height: 16px;
+    background-position: -10px -187px;
+}
+
+/* MEDIA QUERIES */
 
 @media screen and (min-width: 768px) {
-
     .navbar {
         margin-bottom: 100px;
         background-color: transparent;
@@ -202,14 +437,62 @@ body {
     .page-header__title {
         font-size: 48px;
     }
+
+    .latest-news__content {
+        margin-bottom: 50px;
+    }
+
+    .subscribe-block {
+        background-image: url("../images/bg-contact-us.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .subscribe-block__title {
+        font-size: 48px;
+    }
+
+    .subscribe-block__content {
+        max-width: 620px;
+    }
+
+    .subscribe-form {
+        position: relative;
+    }
+
+    .email-form {
+        width: 620px;
+    }
+
+    .subscribe-button {
+        position: absolute;
+        left: 485px;
+        top: 5px;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+
+    .social-links {
+        margin: 0;
+    }
 }
 
 @media screen and (min-width: 992px) {
     .page-header__title {
         font-size: 72px;
         width: 75%;
+    }
+
+    .subscribe-block__title {
+        font-size: 60px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
-
+    .latest-news {
+        margin-bottom: 100px;
+    }
 }
