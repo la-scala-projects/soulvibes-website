@@ -65,7 +65,7 @@ body {
     font-family: 'Lora', serif;
     font-weight: bold;
     font-size: 36px;
-    padding: 20px;
+    padding: 0 20px 0 0;
     margin: 0;
     letter-spacing: 0.05em;
     text-shadow: 0 11px 5px rgba(0, 0, 0, 0.33);
@@ -76,23 +76,122 @@ body {
 .musical-player {
     background-color: #b50b1e;
     margin-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
 }
 
 .musical-player__button-play,
 .musical-player__button-pause {
-    width: 60px;
-    height: 60px;
+    width: 58px;
+    height: 58px;
     border: none;
+    font-size: 0;
+    background-color: transparent;
+    background-image: url("../images/sprite-musical-player.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.musical-player__button-play {
+    background-position: -180px -10px;
+}
+
+.musical-player__button-pause {
+    background-position: -102px -10px;
 }
 
 .musical-player__control {
     width: 40px;
     height: 40px;
-    margin: auto;
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+    background-image: url("../images/sprite-musical-player.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.control--volume {
+    background-position: -438px -10px;
+}
+
+.control--prev {
+    background-position: -318px -10px;
+}
+
+.control--next {
+    background-position: -42px -10px;
+}
+
+.control--replay {
+    background-position: -378px -10px;
+}
+
+.control--list {
+    background-position: -258px -10px;
 }
 
 .musical-player__button-hidden {
     display: none;
+}
+
+.track-progress {
+    width: 90%;
+    position: relative;
+    margin-top: 35px;
+}
+
+.progress {
+    height: 7px;
+    background-color: #000000;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+}
+
+.progress-bar {
+    height: 7px;
+    background-color: #72040d;
+    z-index: 2;
+    overflow: visible;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.toggler {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    left: 15%;
+    top: -5px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.track-title,
+.track-time {
+    display: inline-block;
+    position: absolute;
+    font-size: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.track-title {
+    top: -34px;
+    left: 0;
+    max-width: 80%;
+}
+
+.track-time {
+    top: -34px;
+    right: 0;
+    max-width: 10%;
 }
 
 /* GENRES STATIONS */
@@ -218,16 +317,39 @@ body {
     background-color: #b30b1e;
     color: #ffffff;
     margin-bottom: 50px;
+    padding: 30px 10px;
+    background-image: url("../images/bg-events.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .event-content__container-common {
     display: block;
-    width: 50%;
-    margin-top: 33px;
-    margin-bottom: 33px;
-    margin-left: 10px;
+}
 
-    outline: 2px solid white;
+.event-content__container {
+    font-size: 12px;
+    text-align: center;
+}
+
+.event-content__container--first {
+    margin-bottom: 50px;
+}
+
+.band-name {
+    background: none;
+    border: none;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1em;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.event-address {
+    margin-bottom: 0;
 }
 
 /* LATEST NEWS */
@@ -432,10 +554,29 @@ body {
     .navbar {
         margin-bottom: 100px;
         background-color: transparent;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .page-header {
+        padding-top: 30px;
     }
 
     .page-header__title {
         font-size: 48px;
+    }
+
+    .event-list {
+        padding: 35px;
+    }
+
+    .event-content__container {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .band-name {
+        text-align: left;
     }
 
     .latest-news__content {
@@ -484,6 +625,44 @@ body {
     .page-header__title {
         font-size: 72px;
         width: 75%;
+        margin-bottom: 50px;
+    }
+
+    .event-list {
+        position: relative;
+    }
+
+    .banjo-man__container {
+        position: absolute;
+        width: 544px;
+        height: 604px;
+        background-image: url("../images/bg-events-banjo-man.png");
+        background-repeat: no-repeat;
+        bottom: -20px;
+        right: 20%;
+    }
+
+    .event-content__container-common {
+        width: 50%;
+        margin-left: 10px;
+        padding: 35px;
+        border-left: 2px solid white;
+    }
+
+    .event-date {
+        position: relative;
+    }
+
+    .event-date::before {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        left: -42px;
+        top: 5px;
     }
 
     .subscribe-block__title {

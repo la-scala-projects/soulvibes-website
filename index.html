@@ -38,28 +38,22 @@
         <section class="musical-player">
             <div class="container">
                 <div class="row">
-                    <div class="col-1">
+                    <div class="col-12 col-md-8 d-flex align-items-center justify-content-between musical-player__track">
                         <button class="musical-player__button-play">Play</button>
                         <button class="musical-player__button-pause musical-player__button-hidden">Pause</button>
-                    </div>
-                    <div class="col-7">
-                        <div class="musical-player__track">
-                            <div class="track-title"></div>
-                            <div class="track-bitrate"></div>
-                            <div class="track-progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="toggler"></div>
-                            </div>
+                        <div class="track-progress progress">
+                            <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="toggler"></div>
+                            <div class="track-title">The Diary of Jane - Breaking Benjamin</div>
+                            <div class="track-time">3:20</div>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="musical-player__controls">
-                            <button class="musical-player__control control--sound">Sound</button>
-                            <button class="musical-player__control control--prev">Previous</button>
-                            <button class="musical-player__control control--next">Next</button>
-                            <button class="musical-player__control control--replay">Replay</button>
-                            <button class="musical-player__control control--list">Tracks</button>
-                        </div>
+                    <div class="col-12 col-md-4 p-0 d-flex align-items-center justify-content-center musical-player__controls">
+                        <button class="musical-player__control control--volume">Sound</button>
+                        <button class="musical-player__control control--prev">Previous</button>
+                        <button class="musical-player__control control--next">Next</button>
+                        <button class="musical-player__control control--replay">Replay</button>
+                        <button class="musical-player__control control--list">Tracks</button>
                     </div>
                 </div>
             </div>
@@ -130,6 +124,7 @@
             </div>
             <div class="event-list">
                 <div class="container">
+                    <div class="banjo-man__container"></div>
                     <div class="event-content__container-common">
                         <div class="event-content__container event-content__container--first">
                             <p class="event-date">Wednesday  / 22 Dec 2017 /  12:00 PM</p>
@@ -194,7 +189,7 @@
                     <p class="subscribe-block__content">Be among the first to hear about our new tracks, events, news
                         and so much more!</p>
                     <form action="#" method="post" class="subscribe-form">
-                        <input class="email-form" type="email" name="your-email" id="user-email" placeholder="Your email address">
+                        <input class="email-form" type="email" name="your-email" id="user-email" placeholder="Your email address" required>
                         <input class="subscribe-button" type="submit" name="subscribe" id="btn-subscribe" value="Subscribes">
                     </form>
                 </div>
@@ -203,7 +198,7 @@
     </main>
     <footer class="page-footer">
         <div class="container">
-            <div class="row flex-wrap-reverse page-footer__content-block">
+            <div class="row flex-wrap-reverse page-footer__content-block text-center">
                 <div class="col-8 col-md-6 page-info">
                     <p class="copyright text-center text-md-left">Copyright &copy 2017 soulvibes. All rights reserved</p>
                 </div>
