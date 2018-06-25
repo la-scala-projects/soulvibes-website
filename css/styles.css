@@ -81,9 +81,13 @@ body {
     color: white;
 }
 
+.musical-player__track {
+    margin-bottom: 10px;
+}
+
 .musical-player__button-play,
 .musical-player__button-pause {
-    width: 58px;
+    width: 78px;
     height: 58px;
     border: none;
     font-size: 0;
@@ -102,7 +106,7 @@ body {
 }
 
 .musical-player__control {
-    width: 40px;
+    width: 60px;
     height: 40px;
     font-size: 0;
     border: none;
@@ -208,6 +212,7 @@ body {
     font-weight: bold;
     color: #2a333c;
     margin-bottom: 50px;
+    position: relative;
 }
 
 .genres-stations__list {
@@ -548,6 +553,197 @@ body {
     background-position: -10px -187px;
 }
 
+/* MODAL WINDOWS */
+
+.modal-dialog {
+    color: #2a333c;
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    min-width: 300px;
+}
+
+.modal-header {
+    border: none;
+    position: relative;
+    padding: 20px 20px 10px 20px;
+}
+
+.modal-title {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.modal-title__second-header {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.modal-body__main-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-body {
+    padding-bottom: 10px;
+}
+
+.main-content__title,
+.price__title {
+    color: #999999;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    line-height: 24px;
+}
+
+.price__title {
+    font-weight: bold;
+}
+
+.price__content {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+.dollar {
+    font-size: 14px;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+.time-remaining__block {
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+}
+
+.time-remaining__number {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.modal-footer {
+    border: none;
+    justify-content: center;
+    padding: 0 20px 20px 20px;
+}
+
+.modal-footer:hover {
+    text-decoration: none;
+}
+
+.modal-footer > :not(:last-child) {
+    margin-bottom: 20px;
+    margin-right: 0;
+}
+
+.purchase-button {
+    min-width: 260px;
+    height: 40px;
+    background-color: #ad3147;
+    border-radius: 3px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.purchase-button:hover {
+    text-decoration: none;
+    background-color: #e23c5a;
+}
+
+.purchase-form-icon {
+    display: block;
+    width: 20px;
+    height: 18px;
+    background-image: url("../images/order-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.modal-window__tracklist {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    color: #414141;
+    padding: 0 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    box-shadow: 0 5px 11px 5px rgba(0, 0, 0, 0.33);
+    position: relative;
+    z-index: 5;
+}
+
+.modal-window__tracklist::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-left: 1px solid #dee2e6;
+    border-top: 1px solid #dee2e6;
+    transform: rotate(45deg);
+    right: 15px;
+    top: -8px;
+    z-index: 10;
+}
+
+.table {
+    margin: 0;
+    font-size: 14px;
+}
+
+.modal-window__tracklist .table td,
+.modal-window__tracklist .table th {
+    vertical-align: middle;
+    padding: 5px;
+}
+
+.modal-window__tracklist .table th {
+    border: none;
+}
+
+.modal-window__tracklist .table td {
+    border-bottom: 1px solid #dee2e6;
+    border-top: none;
+}
+
+.modal-window__tracklist .last-table-row td {
+    border: none;
+}
+
+.track-number {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.5em;
+}
+
+.download-icon {
+    display: block;
+    background-image: url('../images/sprite-musical-player.png');
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 15px;
+    background-position: -10px -10px;
+    font-size: 0;
+}
+
 /* MEDIA QUERIES */
 
 @media screen and (min-width: 768px) {
@@ -564,6 +760,10 @@ body {
 
     .page-header__title {
         font-size: 48px;
+    }
+
+    .musical-player__track {
+        margin-bottom: 0;
     }
 
     .event-list {
@@ -626,6 +826,41 @@ body {
         font-size: 72px;
         width: 75%;
         margin-bottom: 50px;
+    }
+
+    .genres-stations__title::before,
+    .upcoming-events__title::before,
+    .latest-news__title::before,
+    .contact-us__title::before {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-color: #dddddd;
+        border-radius: 50%;
+        position: absolute;
+        left: -42px;
+        top: 15px;
+    }
+
+    .genres-stations__title::after,
+    .upcoming-events__title::after,
+    .latest-news__title::after,
+    .contact-us__title::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #dddddd;
+        position: absolute;
+        right: calc(100% + 40px);
+        top: 20px;
+        transform: rotateX(180deg);
+    }
+
+    .dropdown-menu {
+        min-width: 940px;
+        right: 10px;
     }
 
     .event-list {

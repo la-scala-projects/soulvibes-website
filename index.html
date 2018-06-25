@@ -39,21 +39,81 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-8 d-flex align-items-center justify-content-between musical-player__track">
-                        <button class="musical-player__button-play">Play</button>
-                        <button class="musical-player__button-pause musical-player__button-hidden">Pause</button>
-                        <div class="track-progress progress">
+                        <button class="musical-player__button-play" type="button">Play</button>
+                        <button class="musical-player__button-pause musical-player__button-hidden" type="button">Pause</button>
+                        <div class="track-progress progress m-10">
                             <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
                             <div class="toggler"></div>
-                            <div class="track-title">The Diary of Jane - Breaking Benjamin</div>
-                            <div class="track-time">3:20</div>
+                            <div class="track-title" title="The Diary of Jane - Breaking Benjamin">The Diary of Jane - Breaking Benjamin</div>
+                            <div class="track-time" title="3:20">3:20</div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4 p-0 d-flex align-items-center justify-content-center musical-player__controls">
-                        <button class="musical-player__control control--volume">Sound</button>
-                        <button class="musical-player__control control--prev">Previous</button>
-                        <button class="musical-player__control control--next">Next</button>
-                        <button class="musical-player__control control--replay">Replay</button>
-                        <button class="musical-player__control control--list">Tracks</button>
+                    <div class="col-12 col-md-4 d-flex align-items-center justify-content-center musical-player__controls">
+                        <button class="musical-player__control control--volume" type="button">Sound</button>
+                        <button class="musical-player__control control--prev" type="button" >Previous</button>
+                        <button class="musical-player__control control--next" type="button" >Next</button>
+                        <button class="musical-player__control control--replay" type="button" >Replay</button>
+                        <div class="dropdown">
+                            <button class="musical-player__control control--list dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button" id="dropdownMenuButton">Tracks</button>
+                            <div class="dropdown-menu dropdown-menu-right modal-window__tracklist" aria-labelledby="dropdownMenuButton">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col"></th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Artist</th>
+                                            <th scope="col">Album</th>
+                                            <th scope="col">Time</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="track-number">1</td>
+                                            <td>It’s Been Awhile</td>
+                                            <td>Staind</td>
+                                            <td>Break The Cycle</td>
+                                            <td>4:25</td>
+                                            <td><a class="download-icon" href="#">Download</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="track-number">2</td>
+                                            <td>Bodies</td>
+                                            <td>Drowning Pool</td>
+                                            <td>Sinner</td>
+                                            <td>3:22</td>
+                                            <td><a class="download-icon" href="#">Download</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="track-number">3</td>
+                                            <td>Savior</td>
+                                            <td>Rise Againts</td>
+                                            <td>Appeal To Reason</td>
+                                            <td>3:58</td>
+                                            <td><a class="download-icon" href="#">Download</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="track-number">4</td>
+                                            <td>Through Glass</td>
+                                            <td>Stone Sour</td>
+                                            <td>Come Whatever May</td>
+                                            <td>3:58</td>
+                                            <td><a class="download-icon" href="#">Download</a></td>
+                                        </tr>
+                                        <tr class="last-table-row">
+                                            <td class="track-number">5</td>
+                                            <td>Far Away</td>
+                                            <td>Nickelback</td>
+                                            <td>All The Night Reason</td>
+                                            <td>3:58</td>
+                                            <td><a class="download-icon" href="#">Download</a></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -128,17 +188,98 @@
                     <div class="event-content__container-common">
                         <div class="event-content__container event-content__container--first">
                             <p class="event-date">Wednesday  / 22 Dec 2017 /  12:00 PM</p>
-                            <button class="band-name">Linkin Park</button>
+                            <button class="band-name" data-toggle="modal" data-target="#ModalContent-FirstEvent">Linkin Park</button>
                             <p class="event-address">Ziggo Dome<br>
                                 De Passage 100, Amsterdam, Netherlands</p>
                         </div>
                         <div class="event-content__container event-content__container--second">
                             <p class="event-date">Wednesday  / 22 Dec 2017 /  12:00 PM</p>
-                            <button class="band-name">Burger kill</button>
+                            <button class="band-name" data-toggle="modal" data-target="#ModalContent-SecondEvent">Burger kill</button>
                             <p class="event-address">Ziggo Dome<br>
                                 De Passage 100, Amsterdam, Netherlands</p>
                         </div>
                     </div>
+                    <!-- MODAL WINDOW - FIRST EVENT -->
+                    <div class="modal fade" id="ModalContent-FirstEvent" tabindex="-1" role="dialog" aria-labelledby="ModalContentTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header d-flex flex-column">
+                                    <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="ModalLongTitle-FirstEvent">Linkin Park</h4>
+                                    <h5 class="modal-title__second-header">One More Light World Tour</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-body__main-content">
+                                        <div class="address-and-date">
+                                            <p class="main-content__title">Address & Date</p>
+                                            <p>Mohegan Sun Arena<br>
+                                                Uncasville, CT<br>
+                                                Wed, 22 Dec 2017, 12:00 PM</p>
+                                        </div>
+                                        <div class="price">
+                                            <p class="price__title">Price</p>
+                                            <p class="price__content"><sup class="dollar">$</sup>100</p>
+                                        </div>
+                                    </div>
+                                    <div class="time-remaining">
+                                        <p class="main-content__title">Time Remaining</p>
+                                        <div class="time-remaining__container d-flex justify-content-center">
+                                            <div class="time-remaining__block time-remaining__block--days"><span class="time-remaining__number">04</span> Days</div>
+                                            <div class="time-remaining__block time-remaining__block--hours"><span class="time-remaining__number">07</span> Hours</div>
+                                            <div class="time-remaining__block time-remaining__block--minutes"><span class="time-remaining__number">46</span> Minutes</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="modal-footer d-flex flex-column" href="#">
+                                    <div class="purchase-button d-flex justify-content-center align-items-center">Purchase tickets</div>
+                                    <div class="purchase-form-icon"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- MODAL WINDOW - SECOND EVENT -->
+                    <div class="modal fade" id="ModalContent-SecondEvent" tabindex="-1" role="dialog" aria-labelledby="ModalContentTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header d-flex flex-column">
+                                    <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="ModalLongTitle-SecondEvent">Burger kill</h4>
+                                    <h5 class="modal-title__second-header">The Only One Big NL Tour</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-body__main-content">
+                                        <div class="address-and-date">
+                                            <p class="main-content__title">Address & Date</p>
+                                            <p>Mohegan Sun Arena<br>
+                                                Uncasville, CT<br>
+                                                Wed, 22 Dec 2017, 12:00 PM</p>
+                                        </div>
+                                        <div class="price">
+                                            <p class="price__title">Price</p>
+                                            <p class="price__content"><sup class="dollar">$</sup>100</p>
+                                        </div>
+                                    </div>
+                                    <div class="time-remaining">
+                                        <p class="main-content__title">Time Remaining</p>
+                                        <div class="time-remaining__container d-flex justify-content-center">
+                                            <div class="time-remaining__block time-remaining__block--days"><span class="time-remaining__number">04</span> Days</div>
+                                            <div class="time-remaining__block time-remaining__block--hours"><span class="time-remaining__number">07</span> Hours</div>
+                                            <div class="time-remaining__block time-remaining__block--minutes"><span class="time-remaining__number">46</span> Minutes</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="modal-footer d-flex flex-column" href="#">
+                                    <div class="purchase-button d-flex justify-content-center align-items-center">Purchase tickets</div>
+                                    <div class="purchase-form-icon"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
