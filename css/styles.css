@@ -85,24 +85,34 @@ body {
     margin-bottom: 10px;
 }
 
-.musical-player__button-play,
-.musical-player__button-pause {
+.musical-player__button {
     width: 78px;
     height: 58px;
     border: none;
     font-size: 0;
-    background-color: transparent;
-    background-image: url("../images/sprite-musical-player.png");
-    background-repeat: no-repeat;
     cursor: pointer;
+    background-color: transparent;
 }
 
-.musical-player__button-play {
+.button__container {
+    display: block;
+    margin: auto;
+    width: 58px;
+    height: 58px;
+    background-image: url("../images/sprite-musical-player.png");
+    background-repeat: no-repeat;
+}
+
+.button--play {
     background-position: -180px -10px;
 }
 
-.musical-player__button-pause {
+.button--pause {
     background-position: -102px -10px;
+}
+
+.button--hidden {
+    display: none;
 }
 
 .musical-player__control {
@@ -111,9 +121,17 @@ body {
     font-size: 0;
     border: none;
     background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+.control__icon-container {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: auto;
     background-image: url("../images/sprite-musical-player.png");
     background-repeat: no-repeat;
-    cursor: pointer;
 }
 
 .control--volume {
@@ -134,10 +152,6 @@ body {
 
 .control--list {
     background-position: -258px -10px;
-}
-
-.musical-player__button-hidden {
-    display: none;
 }
 
 .track-progress {
@@ -557,7 +571,7 @@ body {
 
 .modal-dialog {
     color: #2a333c;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     line-height: 18px;
     min-width: 300px;
@@ -728,6 +742,10 @@ body {
     border: none;
 }
 
+.mobile-hidden {
+    display: none;
+}
+
 .track-number {
     font-size: 24px;
     font-weight: bold;
@@ -764,6 +782,14 @@ body {
 
     .musical-player__track {
         margin-bottom: 0;
+    }
+
+    .modal-window__tracklist {
+        padding: 0 20px;
+    }
+
+    .mobile-hidden {
+        display: table-cell;
     }
 
     .event-list {

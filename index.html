@@ -5,11 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="Soulvibes - High Quality Internet Music Stations">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <title>Soulvibes - High Quality Internet Music Stations</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <!-- link Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Montserrat:400,400i,500,500i,700,700i" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <!-- link Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
 </head>
 <body>
     <header class="page-header">
@@ -39,8 +55,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-8 d-flex align-items-center justify-content-between musical-player__track">
-                        <button class="musical-player__button-play" type="button">Play</button>
-                        <button class="musical-player__button-pause musical-player__button-hidden" type="button">Pause</button>
+                        <button class="musical-player__button" type="button"><i class="button__container button--play">Play</i></button>
+                        <button class="musical-player__button button--hidden" type="button"><i class="button__container button--pause">Pause</i></button>
                         <div class="track-progress progress m-10">
                             <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
                             <div class="toggler"></div>
@@ -49,69 +65,67 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-4 d-flex align-items-center justify-content-center musical-player__controls">
-                        <button class="musical-player__control control--volume" type="button">Sound</button>
-                        <button class="musical-player__control control--prev" type="button" >Previous</button>
-                        <button class="musical-player__control control--next" type="button" >Next</button>
-                        <button class="musical-player__control control--replay" type="button" >Replay</button>
-                        <div class="dropdown">
-                            <button class="musical-player__control control--list dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button" id="dropdownMenuButton">Tracks</button>
+                        <button class="musical-player__control" type="button"><i class="control__icon-container control--volume">Sound</i></button>
+                        <button class="musical-player__control" type="button"><i class="control__icon-container control--prev">Previous</i></button>
+                        <button class="musical-player__control" type="button"><i class="control__icon-container control--next">Next</i></button>
+                        <button class="musical-player__control" type="button"><i class="control__icon-container control--replay">Replay</i></button>
+                        <div class="dropdown musical-player__control">
+                            <button class="dropdown-toggle musical-player__control" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button" id="dropdownMenuButton"><i class="control__icon-container control--list">Tracks</i></button>
                             <div class="dropdown-menu dropdown-menu-right modal-window__tracklist" aria-labelledby="dropdownMenuButton">
-                                <div class="table-responsive">
-                                    <table class="table table-hover">
-                                        <thead>
+                                <table class="table table-hover table-condensed">
+                                    <thead>
                                         <tr>
-                                            <th scope="col"></th>
+                                            <th class="mobile-hidden" scope="col"></th>
                                             <th scope="col">Name</th>
                                             <th scope="col">Artist</th>
-                                            <th scope="col">Album</th>
+                                            <th class="mobile-hidden" scope="col">Album</th>
                                             <th scope="col">Time</th>
                                             <th scope="col"></th>
                                         </tr>
-                                        </thead>
-                                        <tbody>
+                                    </thead>
+                                    <tbody>
                                         <tr>
-                                            <td class="track-number">1</td>
+                                            <td class="track-number mobile-hidden">1</td>
                                             <td>It’s Been Awhile</td>
                                             <td>Staind</td>
-                                            <td>Break The Cycle</td>
+                                            <td class="mobile-hidden">Break The Cycle</td>
                                             <td>4:25</td>
                                             <td><a class="download-icon" href="#">Download</a></td>
                                         </tr>
                                         <tr>
-                                            <td class="track-number">2</td>
+                                            <td class="track-number mobile-hidden">2</td>
                                             <td>Bodies</td>
                                             <td>Drowning Pool</td>
-                                            <td>Sinner</td>
+                                            <td class="mobile-hidden">Sinner</td>
                                             <td>3:22</td>
                                             <td><a class="download-icon" href="#">Download</a></td>
                                         </tr>
                                         <tr>
-                                            <td class="track-number">3</td>
+                                            <td class="track-number mobile-hidden">3</td>
                                             <td>Savior</td>
                                             <td>Rise Againts</td>
-                                            <td>Appeal To Reason</td>
+                                            <td class="mobile-hidden">Appeal To Reason</td>
                                             <td>3:58</td>
                                             <td><a class="download-icon" href="#">Download</a></td>
                                         </tr>
                                         <tr>
-                                            <td class="track-number">4</td>
+                                            <td class="track-number mobile-hidden">4</td>
                                             <td>Through Glass</td>
                                             <td>Stone Sour</td>
-                                            <td>Come Whatever May</td>
+                                            <td class="mobile-hidden">Come Whatever May</td>
                                             <td>3:58</td>
                                             <td><a class="download-icon" href="#">Download</a></td>
                                         </tr>
                                         <tr class="last-table-row">
-                                            <td class="track-number">5</td>
+                                            <td class="track-number mobile-hidden">5</td>
                                             <td>Far Away</td>
                                             <td>Nickelback</td>
-                                            <td>All The Night Reason</td>
+                                            <td class="mobile-hidden">All The Night Reason</td>
                                             <td>3:58</td>
                                             <td><a class="download-icon" href="#">Download</a></td>
                                         </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
