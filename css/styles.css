@@ -212,6 +212,15 @@ body {
     max-width: 10%;
 }
 
+.dropdown-menu[x-placement^=top]:before {
+    top: initial;
+    bottom: -8px;
+    border-left: 0;
+    border-top: 0;
+    border-right: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+
 /* GENRES STATIONS */
 
 .genres-stations {
@@ -887,15 +896,6 @@ body {
     .dropdown-menu {
         min-width: 940px;
         right: 10px;
-    }
-
-    .dropdown-menu[x-placement^=top]:before {
-        top: initial;
-        bottom: -8px;
-        border-left: 0;
-        border-top: 0;
-        border-right: 1px solid #dee2e6;
-        border-bottom: 1px solid #dee2e6;
     }
 
     .event-list {
